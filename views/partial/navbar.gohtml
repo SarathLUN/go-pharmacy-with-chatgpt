@@ -34,19 +34,19 @@
             <div id="main-navigation" class="col-xl-9 col-lg-12 col-md-12 collapse navbar-collapse ">
                 <ul class="nav navbar-nav">
                     <li class="dropdown ">
-                        <a href="/" class="active">Home</a>
+                        <a href="/" class="{{if eq . `home`}}active{{end}}">Home</a>
                     </li>
                     <li class="dropdown">
-                        <a href="/shop" >Shop</a>
+                        <a href="/shop" class="{{if eq . `shop`}}active{{end}}">Shop</a>
                     </li>
                     <li class="dropdown">
-                        <a href="/about-us">About us</a>
+                        <a href="/about-us" class="{{if eq . `about-us`}}active{{end}}">About us</a>
                     </li>
                     <li class="dropdown">
-                        <a href="/contact-us">Contact us</a>
+                        <a href="/contact-us" class="{{if eq . `contact-us`}}active{{end}}">Contact us</a>
                     </li>
                     <li class="dropdown">
-                        <a href="/shop-cart" id="shopping-cart">
+                        <a href="/shop-cart" id="shopping-cart" class="{{if eq . `shop-cart`}}active{{end}}">
                             <i class="fas fa-shopping-cart"></i> <span class="badge badge-warning">4</span>
                         </a>
                     </li>
