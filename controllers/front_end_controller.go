@@ -10,17 +10,17 @@ func LoadHomePage(c *gin.Context) {
 }
 
 func LoadShopPage(c *gin.Context) {
-	c.HTML(http.StatusOK, "shop.html", gin.H{})
+	c.HTML(http.StatusOK, "shop.gohtml", gin.H{})
 }
 
 func LoadShopCartPage(c *gin.Context) {
-	c.HTML(http.StatusOK, "shop-cart.html", gin.H{})
+	c.HTML(http.StatusOK, "shop-cart.gohtml", gin.H{})
 }
 
 func LoadAboutUsPage(c *gin.Context) {
-	c.HTML(http.StatusOK, "about-us.html", gin.H{})
+	c.HTML(http.StatusOK, "about-us.gohtml", gin.H{})
 }
 
 func LoadContactUsPage(c *gin.Context) {
-	c.HTML(http.StatusOK, "contact-us.html", gin.H{})
+	c.HTML(http.StatusOK, "contact-us.gohtml", gin.H{})
 }
