@@ -6,7 +6,7 @@ import (
 )
 
 func LoadHomePage(c *gin.Context) {
-	c.HTML(http.StatusOK, "home.html", gin.H{})
+	c.HTML(http.StatusOK, "home.gohtml", gin.H{})
 }
 
 func LoadShopPage(c *gin.Context) {
