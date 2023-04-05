@@ -1,9 +1,15 @@
 package main
 
 import (
+	"github.com/SarathLUN/go-pharmacy-with-chatgpt/config"
 	"github.com/SarathLUN/go-pharmacy-with-chatgpt/routes"
 	"github.com/gin-gonic/gin"
 )
+
+func init() {
+	// test DB connection
+	config.ConnectDB()
+}
 
 func main() {
 	// Set Gin to production mode
@@ -23,4 +29,5 @@ func main() {
 	if err := router.Run("localhost:8080"); err != nil {
 		panic(err)
 	}
+
 }

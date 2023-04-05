@@ -6,6 +6,7 @@ import (
 )
 
 func LoadHomePage(c *gin.Context) {
+
 	c.HTML(http.StatusOK, "home.gohtml", gin.H{
 		"Active": "home",
 	})
