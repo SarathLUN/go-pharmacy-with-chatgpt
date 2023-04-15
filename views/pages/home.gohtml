@@ -138,6 +138,8 @@
                              aria-labelledby="pills-home-tab">
                             <div class="inner-featured">
                                 <div class="row">
+                                    {{ range .Products }}
+                                    <!-- 1 product item -->
                                     <div class="col-lg-3 col-md-4 col-sm-6">
                                         <div class="single-featured">
                                             <div class="singl-top position-relative">
@@ -150,12 +152,14 @@
                                                         View</a></div>
                                             </div>
                                             <div class="fecure-containt">
-                                                <h3>Face Mask</h3>
-                                                <h4>$45.00</h4>
+                                                <h3>{{.Name}}</h3>
+                                                <h4>${{.Price}}</h4>
                                                 <a href="#" class="theme-btn">Add to Cart</a>
                                             </div>
                                         </div>
                                     </div>
+                                    <!-- end 1 product item -->
+                                        {{ end }}
                                     <div class="col-lg-3 col-md-4 col-sm-6">
                                         <div class="single-featured">
                                             <div class="singl-top position-relative">

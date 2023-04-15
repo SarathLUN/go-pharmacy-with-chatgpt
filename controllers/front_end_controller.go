@@ -1,14 +1,20 @@
 package controllers
 
 import (
+	"github.com/SarathLUN/go-pharmacy-with-chatgpt/models"
 	"github.com/gin-gonic/gin"
+	"log"
 	"net/http"
 )
 
 func LoadHomePage(c *gin.Context) {
+	products := models.GetFeaturedProducts()
+	// log the products into console with readable format
+	log.Println(products)
 
 	c.HTML(http.StatusOK, "home.gohtml", gin.H{
-		"Active": "home",
+		"Active":   "home",
+		"Products": products,
 	})
 }
 
