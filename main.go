@@ -2,13 +2,19 @@ package main
 
 import (
 	"github.com/SarathLUN/go-pharmacy-with-chatgpt/config"
+	"github.com/SarathLUN/go-pharmacy-with-chatgpt/models"
 	"github.com/SarathLUN/go-pharmacy-with-chatgpt/routes"
 	"github.com/gin-gonic/gin"
+	"log"
 )
 
 func init() {
 	// test DB connection
-	config.ConnectDB()
+	db := config.ConnectDB()
+	err := db.AutoMigrate(&models.Product{})
+	if err != nil {
+		log.Fatalln("Error migrating database: ", err)
+	}
 }
 
 func main() {

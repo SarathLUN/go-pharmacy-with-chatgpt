@@ -7,10 +7,12 @@ import (
 
 type Product struct {
 	gorm.Model
-	Name        string `json:"name"`
-	Description string `json:"description"`
-	Price       int    `json:"price"`
-	IsFeatured  bool   `json:"is_featured"`
+	Name            string `json:"name"`
+	Description     string `json:"description"`
+	Price           int    `json:"price"`
+	IsFeatured      bool   `json:"is_featured"`
+	ImageURL        string `json:"image_url"`
+	DiscountPercent int    `json:"discount_percent"`
 }
 
 /*func init() {
