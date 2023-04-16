@@ -24,6 +24,12 @@ func LoadShopPage(c *gin.Context) {
 	})
 }
 
+func LoadShopDetailPage(c *gin.Context) {
+	c.HTML(http.StatusOK, "shop-detail.gohtml", gin.H{
+		"Active": "shop",
+	})
+}
+
 func LoadShopCartPage(c *gin.Context) {
 	c.HTML(http.StatusOK, "shop-cart.gohtml", gin.H{
 		"Active": "shop-cart",

@@ -9,6 +9,7 @@ func LoadFrontEndRoutes(router *gin.Engine) {
 
 	router.GET("/", controllers.LoadHomePage)
 	router.GET("/shop", controllers.LoadShopPage)
+	router.GET("/shop-detail", controllers.LoadShopDetailPage)
 	router.GET("/shop-cart", controllers.LoadShopCartPage)
 	router.GET("/about-us", controllers.LoadAboutUsPage)
 	router.GET("/contact-us", controllers.LoadContactUsPage)
